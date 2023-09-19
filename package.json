@@ -11,7 +11,7 @@
     "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },
-  "main": "api/index.ts",
+  "main": "api/index.mjs",
   "ampt": {
     "app": "boro-dev-ampt-demo",
     "org": "ben-ampt"
@@ -21,11 +21,12 @@
   ],
   "dependencies": {
     "@ampt/data": "^0.0.1-beta.17",
-    "@ampt/sdk": "^0.0.1-beta.59",
+    "@ampt/sdk": "^0.0.1-beta.64",
     "express": "^4.18.2",
     "express-async-handler": "^1.2.0"
   },
   "devDependencies": {
+    "@nextui-org/react": "^2.1.13",
     "@types/react": "^18.2.14",
     "@types/react-dom": "^18.2.6",
     "@typescript-eslint/eslint-plugin": "^5.61.0",
@@ -36,8 +37,10 @@
     "eslint": "^8.44.0",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.1",
+    "framer-motion": "^10.16.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "sass": "^1.67.0",
     "swr": "^2.0.0",
     "typescript": "^5.0.2",
     "vite": "^4.4.0"

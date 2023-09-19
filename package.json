@@ -13,8 +13,8 @@
   },
   "main": "api/index.ts",
   "ampt": {
-    "org": "",
-    "app": "react-vite"
+    "app": "boro-dev-ampt-demo",
+    "org": "ben-ampt"
   },
   "files": [
     "!src/**/*"

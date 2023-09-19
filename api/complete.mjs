@@ -30,14 +30,39 @@ todos.get(
 todos.post(
   "/",
   asyncHandler(async (req, res) => {
-    res.status(400).json({ message: "not implemented!" });
+    const id = Date.now();
+    const { name } = req.body;
+
+    if (!name) {
+      res.status(400).json({ message: "name is required" });
+      return;
+    }
+
+    await data.set(`todo:${id}`, { id, name, status: "incomplete" });
+    res.sendStatus(201);
   })
 );
 
 todos.patch(
   "/:id",
   asyncHandler(async (req, res) => {
-    res.status(400).json({ message: "not implemented!" });
+    const { id } = req.params;
+
+    const todo = await data.get(`todo:${id}`);
+
+    if (!todo) {
+      res.sendStatus(404);
+      return;
+    }
+
+    await data.set(`todo:${id}`, {
+      ...todo,
+      status: todo.status === "complete" ? "incomplete" : "complete",
+    });
+
+    res.json({
+      message: `Todo ${todo.name} updated`,
+    });
   })
 );
 

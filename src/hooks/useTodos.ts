@@ -12,11 +12,12 @@ type ListTodosResponse = {
 export function useTodos(): {
   todos: ListTodosResponse["items"] | [];
   loading: boolean;
+  refresh: () => Promise<ListTodosResponse | undefined>;
 } {
-  const { data, isLoading, isValidating } = useSWR<ListTodosResponse>(
+  const { data, mutate, isLoading, isValidating } = useSWR<ListTodosResponse>(
     "/todos",
     (url) => apiClient({ url })
   );
   const loading = isLoading || isValidating;
-  return { todos: data?.items ?? [], loading };
+  return { todos: data?.items ?? [], refresh: mutate, loading };
 }

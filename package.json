@@ -26,7 +26,6 @@
     "express-async-handler": "^1.2.0"
   },
   "devDependencies": {
-    "@nextui-org/react": "^2.1.13",
     "@types/react": "^18.2.14",
     "@types/react-dom": "^18.2.6",
     "@typescript-eslint/eslint-plugin": "^5.61.0",
@@ -37,10 +36,9 @@
     "eslint": "^8.44.0",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.1",
-    "framer-motion": "^10.16.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "sass": "^1.67.0",
+    "react-feather": "^2.0.10",
     "swr": "^2.0.0",
     "typescript": "^5.0.2",
     "vite": "^4.4.0"

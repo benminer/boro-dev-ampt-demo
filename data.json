@@ -1,0 +1,30 @@
+[
+  {
+    "key": "todo:1",
+    "value": {
+      "id": "1",
+      "name": "Show an Ampt Demo",
+      "status": "incomplete",
+      "completed": "2021-05-26T12:00:00.000Z"
+    },
+    "label1": "complete:2021-05-26T012:00:00.000Z"
+  },
+  {
+    "key": "todo:2",
+    "value": {
+      "id": "2",
+      "name": "Give presentation",
+      "status": "incomplete"
+    },
+    "label1": "incomplete:9999"
+  },
+  {
+    "key": "todo:3",
+    "value": {
+      "id": "3",
+      "name": "Drive to Murfressboro",
+      "status": "complete"
+    },
+    "label1": "complete:9999"
+  }
+]
